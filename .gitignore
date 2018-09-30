@@ -87,3 +87,8 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+*.idea
+hw1/models/*
+hw1/expert_data/*
+*.DS_Store

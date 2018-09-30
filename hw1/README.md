@@ -25,3 +25,34 @@ In `experts/`, the provided expert policies are:
 * Walker2d-v2.pkl
 
 The name of the pickle file corresponds to the name of the gym environment.
+
+------------------------------
+
+## Behavior Cloning
+
+### Performance
+1. Humanoid-v2: Make a 3D two-legged robot walk.
+
+    model structure: 
+    ```
+    Train_data: 20 roll-outs
+    FC(input_dim*128*128*64*output_dim), 
+    Adam Optimizer,
+    mse error, 
+    epoch=60, 
+    learning_rate = 0.01,
+    batch_size = 128
+    ```
+    model performance:
+    ```
+    mean return 355.33142605852265
+    std of return 84.7170588145909
+    ```
+    expert performance:
+    ```
+    mean return 10416.404812957171
+    std of return 46.27421077209787
+    ```
+### Issues
+When do `render()` via `Gym`, camera cannot keep track of agents
+
