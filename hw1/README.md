@@ -53,6 +53,34 @@ The name of the pickle file corresponds to the name of the gym environment.
     mean return 10416.404812957171
     std of return 46.27421077209787
     ```
-### Issues
-When do `render()` via `Gym`, camera cannot keep track of agents
+
+## Dagger
+
+### Performance
+1. Humanoid-v2: Make a 3D two-legged robot walk.
+
+    model structure: 
+    ```
+    Train_data: 20 roll-outs
+    FC(input_dim*128*128*64*output_dim), 
+    Adam Optimizer,
+    mse error, 
+    epoch=60, 
+    learning_rate = 0.01,
+    batch_size = 128
+    ```
+    model performance:
+    ```
+    mean return 274.8870598152557
+    std of return 11.416691108570921
+    ```
+    expert performance:
+    ```
+    mean return 10416.404812957171
+    std of return 46.27421077209787
+    ```
+
+## Issues
+Dagger's average return is worse than Behavior Cloning, standard deviation is better than Behavor Cloning
+Why Dagger performs not as good as expected, need more experiments
 
